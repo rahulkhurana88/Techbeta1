@@ -1,0 +1,54 @@
+/* Reset some default styles for the body and header */
+body, header {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the profile section */
+.profile {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile img {
+    width: 150px; /* Adjust the image size as needed */
+    border-radius: 50%; /* Makes the image round */
+}
+
+/* Style the bio section */
+.bio {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+button {
+    padding: 10px 20px; /* Adjust the padding to change the button size */
+    background-color: #0074d9; /* Change the background color */
+    color: white; /* Change the text color */
+    border: 2px solid #001f3f; /* Add a solid border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    font-size: 16px; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style the button when hovering over it */
+button:hover {
+    background-color: #001f3f; /* Change the background color on hover */
+    border-color: #0074d9; /* Change the border color on hover */
+}

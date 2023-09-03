@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <h1>TechSavvy</h1>
+    </header>
+    <center>
+        <h1>MY SELF</h1>
+        <button onclick="window.location.href='myself.html'">CLICK ON ME</button>
+        <h1>AI TOOLS</h1>
+         <button onclick="window.location.href='aitools.html'">CLICK ON ME</button>
+         <h1>LOGIN INFO</h1>
+         <button onclick="window.location.href='logininfo.html'">CLICK ON ME</button>
+    </center>
+
+    <!-- Chat popup button -->
+    <div id="chat-popup-button">MIOMI</div>
+
+    <!-- Chat popup container -->
+    <div id="chat-popup">
+        <!-- Link to the ChatGPT app -->
+        <a id="chat-link" href="https://chat.openai.com/c/396c7029-6d78-4220-95d2-ec596acb58da"target="_blank">CLICK ON ME FOR MIOMI</a>
+
+        <!-- Chat messages and input field go here -->
+        <div id="chat-messages"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button" onclick="sendMessage()">COMING SOON "Send"</button>
+    </div>
+
+    <script>
+        var chatPopupButton = document.getElementById("chat-popup-button");
+        var chatPopup = document.getElementById("chat-popup");
+
+        // Toggle chat popup visibility
+        chatPopupButton.addEventListener("click", function() {
+            chatPopup.style.display = (chatPopup.style.display === "none" || chatPopup.style.display === "") ? "block" : "none";
+        });
+
+        // Function to send a message
+        function sendMessage() {
+            var userMessage = userInputElement.value;
+            var chatMessagesElement = document.getElementById("chat-messages");
+            var userMessageDiv = document.createElement("div");
+            userMessageDiv.innerHTML = "<strong>You:</strong> " + userMessage;
+            chatMessagesElement.appendChild(userMessageDiv);
+
+            // Here, you would typically send the user's message to a chatbot and get a response.
+            // For simplicity, we're just echoing the user's message here.
+            var botResponseDiv = document.createElement("div");
+            botResponseDiv.innerHTML = "<strong>AI Bot:</strong> " + userMessage;
+            chatMessagesElement.appendChild(botResponseDiv);
+
+            // Clear the user input field
+            userInputElement.value = "";
+        }
+    </script>
+</body>
+</html>

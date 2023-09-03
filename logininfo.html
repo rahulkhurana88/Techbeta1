@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/logininfo.css">
+    <title>Sample Form</title>
+    <!-- Your CSS and styling here -->
+</head>
+<body>
+    <center>
+        <h1>Sample Form</h1>
+        <form id="loginForm" action="/resultslog.html" method="post">
+            <label for="appName">APP NAME:</label>
+            <input type="text" id="appName" name="appName" required><br><br>
+
+<label for="id">ID:</label>
+            <input type="text" id="id" name="id" required><br><br>
+
+            <label for="password">PASSWORD:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </center>
+    <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Capture form data
+        const appName = document.getElementById('appName').value;
+        const id = document.getElementById('id').value;
+        const password = document.getElementById('password').value;
+        const message = document.getElementById('message').value;
+
+        // Log the captured data
+        console.log('Captured Data:');
+        console.log('App Name:', appName);
+        console.log('ID:', id);
+        console.log('Password:', password);
+        console.log('Message:', message);
+
+        // Store form data in localStorage
+        localStorage.setItem('appName', appName);
+        localStorage.setItem('id', id);
+        localStorage.setItem('password', password);
+        localStorage.setItem('message', message);
+
+        // Redirect to the other page
+        window.location.href = 'otherpage.html';
+    });
+</script>
+<center>
+  <br><br>
+<button onclick="window.location.href='/resultslog.html'">CLICK ON ME</button>
+</center>
+</body>
+</html>
